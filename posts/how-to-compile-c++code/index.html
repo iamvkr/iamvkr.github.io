@@ -1,0 +1,52 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-sckkx6r4> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v5.5.6"><title>How to Compile C++ Code</title><link rel="stylesheet" href="/_astro/advance-datatypes-in-ts.Bzq7Dzx6.css">
+<link rel="stylesheet" href="/_astro/advance-datatypes-in-ts.BD02cVDR.css"></head> <body class="bg-[radial-gradient(#2f7df4_1px,transparent_1px)] [background-size:16px_16px]" data-astro-cid-sckkx6r4> <div class="flex items-center justify-center" data-astro-cid-sckkx6r4> <div class="min-h-[90vh] w-full md:w-4xl md:mx-auto" data-astro-cid-sckkx6r4> <header class="p-4 w-full"> <div class="container flex justify-between h-16 mx-auto w-full"> <div class="flex items-center justify-between w-full"> <a rel="noopener noreferrer" href="#" aria-label="Back to homepage" class="text-3xl font-bold">
+IamVkr
+</a> <ul class="items-stretch hidden space-x-3 lg:flex"> <li class="flex"> <a rel="noopener noreferrer" href="/" class="flex items-center px-4">Home</a> </li> <li class="flex"> <a rel="noopener noreferrer" href="/projects" class="flex items-center px-4">Projects</a> </li> <li class="flex"> <a rel="noopener noreferrer" href="/blog" class="flex items-center px-4">Blog</a> </li> <li class="flex"> <a rel="noopener noreferrer" href="/about" class="flex items-center px-4">About</a> </li> </ul> </div> <button class="p-4 lg:hidden"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 dark:text-gray-800"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path> </svg> </button> </div> </header>  <section class="px-2"> <article class="py-10 bg-gray-100 text-gray-900 w-full min-h-[90vh]"> <div class="w-full mx-auto space-y-4 text-center"> <h1 class="text-xl font-bold leading-tight md:text-3xl" id="titleBox"> How to Compile C++ Code </h1> <p class="text-sm text-gray-600">by
+<span itemprop="name" class="font-semibold">iamvkr on </span> <time datetime="2025-04-15">2025-04-15</time> </p> </div> <div class="border-b border-gray-300 text-gray-800"> <div class="flex justify-center pt-4 space-x-4 align-center"> <a id="shareTwLink" rel="noopener noreferrer" href="#" aria-label="Twitter" class="p-2 rounded-md "> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/twitter/twitter-original.svg" class="w-4 h-4"> </a> <a id="shareLnLink" rel="noopener noreferrer" href="#" aria-label="LinkedIn" class="p-2 rounded-md "> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-plain.svg" class="w-4 h-4"> </a> <a id="shareFbLink" rel="noopener noreferrer" href="#" aria-label="Facebook" class="p-2 rounded-md text-gray__"> <svg viewBox="0 0 128 128" class="w-4 h-4"> <rect fill="#000" x="4.83" y="4.83" width="118.35" height="118.35" rx="6.53" ry="6.53"></rect><path fill="#fff" d="M86.48 123.17V77.34h15.38l2.3-17.86H86.48v-11.4c0-5.17 1.44-8.7 8.85-8.7h9.46v-16A126.56 126.56 0 0091 22.7c-13.62 0-23 8.3-23 23.61v13.17H52.62v17.86H68v45.83z"></path> </svg> </a> <button id="shareBtn" aria-label="Email" class="p-2 rounded-md text-gray-800 cursor-pointer"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4"> <path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z"></path> </svg> </button> </div> </div> <div class="text-gray-800 px-4 md:px-10 my-10 markdown-body pt-4"> <h1 id="running-your-first-c-program">Running Your First C++ Program</h1>
+<p>This guide will walk you through the process of setting up your environment and running a simple C++ program.</p>
+<p><strong>1. Installation</strong></p>
+<ul>
+<li><strong>Install a C++ Compiler:</strong>
+<ul>
+<li><strong>Windows:</strong> Download and install <strong>MinGW</strong> (Minimalist GNU for Windows). This package includes the GCC (GNU Compiler Collection) compiler.</li>
+<li><strong>macOS:</strong> C++ is generally pre-installed on macOS. You can use the <strong>clang</strong> compiler from the command line.</li>
+<li><strong>Linux:</strong> C++ is typically installed by default. You can use the <strong>g++</strong> compiler from the terminal.</li>
+</ul>
+</li>
+</ul>
+<p><strong>2. Set Environment Variables (Optional)</strong></p>
+<ul>
+<li><strong>Windows:</strong>
+<ul>
+<li>Right-click “This PC” and select “Properties.”</li>
+<li>Click on “Advanced system settings.”</li>
+<li>Go to the “Environment Variables” tab.</li>
+<li>In the “System variables” section, find the “Path” variable and click “Edit.”</li>
+<li>Add the path to your compiler’s bin directory (e.g., <code>C:\MinGW\bin</code>) to the list.</li>
+<li>Click “OK” to save the changes.</li>
+</ul>
+</li>
+</ul>
+<p><strong>3. Create a C++ File in VS Code</strong></p>
+<ul>
+<li>Open VS Code.</li>
+<li>Create a new file (<strong>File > New File</strong>) and save it with a <code>.cpp</code> extension (e.g., <code>hello.cpp</code>).</li>
+</ul>
+<p><strong>4. Write Your C++ Code</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="c"><code><span class="line"><span style="color:#F97583">#include</span><span style="color:#9ECBFF"> &#x3C;iostream></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">int</span><span style="color:#B392F0"> main</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#E1E4E8">  std::cout </span><span style="color:#F97583">&#x3C;&#x3C;</span><span style="color:#9ECBFF"> "Hello, world!"</span><span style="color:#F97583"> &#x3C;&#x3C;</span><span style="color:#E1E4E8"> std::endl;</span></span>
+<span class="line"><span style="color:#F97583">  return</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p><strong>5. Compile and Run</strong></p>
+<p>Open the integrated terminal in VS Code (Terminal > New Terminal).</p>
+<p>Navigate to the directory where you saved your hello.cpp file using the cd command.</p>
+<p>Compile the code using the following command:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">g++</span><span style="color:#9ECBFF"> hello.cpp</span><span style="color:#79B8FF"> -o</span><span style="color:#9ECBFF"> hello</span></span></code></pre>
+<p>This command will create an executable file named hello.</p>
+<p><strong>5. Run the Program</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">./hello</span></span></code></pre>
+<p>You should see the output:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>Hello, world!</span></span></code></pre>
+<p>Congratulations! You have successfully compiled and run your first C++ program.</p> </div> </article> </section> <script type="module">const t=document.getElementById("shareBtn"),e=document.getElementById("titleBox");t?.addEventListener("click",()=>{navigator.share&&navigator.share({title:e?.innerText,text:e?.innerText,url:window.location.href})});const n=document.getElementById("shareTwLink");n?.setAttribute("href",`https://twitter.com/intent/tweet?text=${encodeURIComponent(window.location.href)}`);const o=document.getElementById("shareLnLink");o?.setAttribute("href",`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(window.location.href)}`);const r=document.getElementById("shareFbLink");r?.setAttribute("href",`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`);</script>  </div> </div> </body></html>

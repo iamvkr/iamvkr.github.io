@@ -1,0 +1,217 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-sckkx6r4> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v5.5.6"><title>Advance Data Types In Typescript - Union Intersection</title><link rel="stylesheet" href="/_astro/advance-datatypes-in-ts.Bzq7Dzx6.css">
+<link rel="stylesheet" href="/_astro/advance-datatypes-in-ts.BD02cVDR.css"></head> <body class="bg-[radial-gradient(#2f7df4_1px,transparent_1px)] [background-size:16px_16px]" data-astro-cid-sckkx6r4> <div class="flex items-center justify-center" data-astro-cid-sckkx6r4> <div class="min-h-[90vh] w-full md:w-4xl md:mx-auto" data-astro-cid-sckkx6r4> <header class="p-4 w-full"> <div class="container flex justify-between h-16 mx-auto w-full"> <div class="flex items-center justify-between w-full"> <a rel="noopener noreferrer" href="#" aria-label="Back to homepage" class="text-3xl font-bold">
+IamVkr
+</a> <ul class="items-stretch hidden space-x-3 lg:flex"> <li class="flex"> <a rel="noopener noreferrer" href="/" class="flex items-center px-4">Home</a> </li> <li class="flex"> <a rel="noopener noreferrer" href="/projects" class="flex items-center px-4">Projects</a> </li> <li class="flex"> <a rel="noopener noreferrer" href="/blog" class="flex items-center px-4">Blog</a> </li> <li class="flex"> <a rel="noopener noreferrer" href="/about" class="flex items-center px-4">About</a> </li> </ul> </div> <button class="p-4 lg:hidden"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 dark:text-gray-800"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path> </svg> </button> </div> </header>  <section class="px-2"> <article class="py-10 bg-gray-100 text-gray-900 w-full min-h-[90vh]"> <div class="w-full mx-auto space-y-4 text-center"> <h1 class="text-xl font-bold leading-tight md:text-3xl" id="titleBox"> Advance Data Types In Typescript - Union Intersection </h1> <p class="text-sm text-gray-600">by
+<span itemprop="name" class="font-semibold">iamvkr on </span> <time datetime="2025-04-16">2025-04-16</time> </p> </div> <div class="border-b border-gray-300 text-gray-800"> <div class="flex justify-center pt-4 space-x-4 align-center"> <a id="shareTwLink" rel="noopener noreferrer" href="#" aria-label="Twitter" class="p-2 rounded-md "> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/twitter/twitter-original.svg" class="w-4 h-4"> </a> <a id="shareLnLink" rel="noopener noreferrer" href="#" aria-label="LinkedIn" class="p-2 rounded-md "> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-plain.svg" class="w-4 h-4"> </a> <a id="shareFbLink" rel="noopener noreferrer" href="#" aria-label="Facebook" class="p-2 rounded-md text-gray__"> <svg viewBox="0 0 128 128" class="w-4 h-4"> <rect fill="#000" x="4.83" y="4.83" width="118.35" height="118.35" rx="6.53" ry="6.53"></rect><path fill="#fff" d="M86.48 123.17V77.34h15.38l2.3-17.86H86.48v-11.4c0-5.17 1.44-8.7 8.85-8.7h9.46v-16A126.56 126.56 0 0091 22.7c-13.62 0-23 8.3-23 23.61v13.17H52.62v17.86H68v45.83z"></path> </svg> </a> <button id="shareBtn" aria-label="Email" class="p-2 rounded-md text-gray-800 cursor-pointer"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4"> <path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z"></path> </svg> </button> </div> </div> <div class="text-gray-800 px-4 md:px-10 my-10 markdown-body pt-4"> <p>In the previous post we have discussed about the basics of typescript. Now we will be continuing with beyond the types of typescript.</p>
+<h2 id="beyond-the-basics">Beyond the basics</h2>
+<p>Typescript offers a rich type system that goes beyond simple primitives. Some of the more advanced types:</p>
+<ul>
+<li>Tuples</li>
+<li>Enums</li>
+<li>Any</li>
+<li>Never</li>
+<li>Unknown</li>
+<li>Union Types, Intersection Types, Generic Types</li>
+</ul>
+<h3 id="tuples">Tuples</h3>
+<p>Tuples allow you to define the exact types of each element in a collection, improving type safety and reducing the risk of runtime errors</p>
+<p>Example:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">let</span><span style="color:#E1E4E8"> userTuple</span><span style="color:#F97583">:</span><span style="color:#E1E4E8"> [</span><span style="color:#79B8FF">string</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">number</span><span style="color:#E1E4E8">];</span></span>
+<span class="line"><span style="color:#E1E4E8">userTuple </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> [</span><span style="color:#9ECBFF">"user1"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">24</span><span style="color:#E1E4E8">]; </span><span style="color:#6A737D">/*==>correct*/</span></span>
+<span class="line"><span style="color:#6A737D">/* userTuple = [24,"user1"] ==>incorrect */</span></span></code></pre>
+<p>Consider the example:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">let</span><span style="color:#E1E4E8"> rgb</span><span style="color:#F97583">:</span><span style="color:#E1E4E8"> [</span><span style="color:#79B8FF">number</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">number</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">number</span><span style="color:#E1E4E8">];</span></span>
+<span class="line"><span style="color:#E1E4E8">rgb </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> [</span><span style="color:#79B8FF">255</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">255</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">255</span><span style="color:#E1E4E8">];</span></span>
+<span class="line"><span style="color:#E1E4E8">rgb[</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 244</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">rgb[</span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "hello"</span><span style="color:#E1E4E8">; </span><span style="color:#6A737D">/** not allowed */</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">/** unexpected behaviour  */</span></span>
+<span class="line"><span style="color:#E1E4E8">rgb.</span><span style="color:#B392F0">push</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"100"</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(rgb); </span><span style="color:#6A737D">/* [ 244, 255, 255, "100" ] */</span></span></code></pre>
+<p><em>Note that rgb throws error if there’s number in first index however you can still update the value by push or pop methods</em></p>
+<p><code>Difference between array and tuples:</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Feature</th><th>Array</th><th>Tuple</th></tr></thead><tbody><tr><td><strong>Definition</strong></td><td>An ordered collection of elements of the same data type.</td><td>An ordered, immutable collection of elements of potentially different data types.</td></tr><tr><td><strong>Mutability</strong></td><td>Mutable (elements can be added, removed, or modified).</td><td>Immutable (elements cannot be added, removed, or modified after creation).</td></tr><tr><td><strong>Type Inference</strong></td><td>Inferred based on the type of the first element.</td><td>Explicitly defined with specific types for each element.</td></tr><tr><td><strong>Example</strong></td><td><code>let numbers: number[] = [1, 2, 3];</code></td><td><code>let user: [string, number] = ["John", 30];</code></td></tr><tr><td><strong>Use Cases</strong></td><td><ul><li>Storing a collection of values of the same type.</li><li>Working with dynamic data structures.</li></ul></td><td><ul><li>Representing fixed-size data structures with specific types for each element.</li><li>Ensuring type safety for specific data combinations.</li></ul></td></tr></tbody></table>
+<h3 id="enums">Enums</h3>
+<p>Enum are used to group things:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">enum</span><span style="color:#B392F0"> Direction</span><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">	TOP</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> "top"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    DOWN</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF">"down"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(Direction.</span><span style="color:#79B8FF">TOP</span><span style="color:#F97583"> +</span><span style="color:#E1E4E8"> Direction.</span><span style="color:#79B8FF">DOWN</span><span style="color:#E1E4E8">);</span></span></code></pre>
+<p>More with enums:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">enum</span><span style="color:#B392F0"> CHOICE</span><span style="color:#E1E4E8"> { </span><span style="color:#6A737D">/*DEFAULT VALUE C1 = 0, C2=1,C3=2 */</span></span>
+<span class="line"><span style="color:#79B8FF">    C1</span><span style="color:#F97583"> =</span><span style="color:#79B8FF"> 10</span><span style="color:#E1E4E8">, </span><span style="color:#6A737D">/* Values can be overwritten, C2 becomes 11 and so on*/</span></span>
+<span class="line"><span style="color:#79B8FF">    C2</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    C3</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#6A737D">/* WHAT IF VALUE ARE STRING */</span></span>
+<span class="line"><span style="color:#F97583">enum</span><span style="color:#B392F0"> CHOICE2</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">    C1</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> "10"</span><span style="color:#E1E4E8">, </span><span style="color:#6A737D">/* needs to explicitly give values to all */</span></span>
+<span class="line"><span style="color:#79B8FF">    C2</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> "20"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    C3</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> "30"</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#6A737D">/** string and number combination */</span></span>
+<span class="line"><span style="color:#F97583">enum</span><span style="color:#B392F0"> CHOICE3</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">    C1</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> "10"</span><span style="color:#E1E4E8">, </span></span>
+<span class="line"><span style="color:#79B8FF">    C2</span><span style="color:#F97583"> =</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    C3</span><span style="color:#6A737D"> /* c3 becomes 1 */</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h3 id="any">Any</h3>
+<p>Any is considered as not to be a used guy. Whenever we define a variable type as any, we are basically assigning <em>the variable value that can hold any type of value, either be a string or number or boolean or something else.</em></p>
+<p>In this case typescript doesn’t complain and behaves like javascript with no strict type checking. We won’t get a proper recommendation and code completion in vs code. Using any fails itself the purpose of the using typescript in the code. This is the reason why it is not recommended to use any in typescript, however any type exists for the specific or in rare case when notihing seems to fix the issue and must be used as a last option.</p>
+<p><code>In short:</code></p>
+<ul>
+<li>Disables type checking for the variable.</li>
+<li>You can assign any value to an ‘any’ variable and perform any operation on it.</li>
+<li>Can lead to runtime errors if the assigned value doesn’t support the operation.</li>
+<li>Use with caution, as it defeats the purpose of TypeScript’s type system.</li>
+</ul>
+<h3 id="never">Never</h3>
+<p>This is kind of interesting types available in typescript. It is used for the code that will never return anything, for example infinite loop. Here in below example, the when the function abcd is executed, the control is trapped inside the infinite loop.:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">function</span><span style="color:#B392F0"> abcd</span><span style="color:#E1E4E8">()</span><span style="color:#F97583">:</span><span style="color:#79B8FF">never</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">    while</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">true</span><span style="color:#E1E4E8">){}</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"ABC"</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#B392F0">abcd</span><span style="color:#E1E4E8">()</span></span>
+<span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"XYZ"</span><span style="color:#E1E4E8">);</span></span></code></pre>
+<p>While writing the above code in VS Code, the <code>console.log("XYZ")</code> is dimmed out, which indicates this line won’t be executed ever.This makes debugging the code more easier.</p>
+<h3 id="unknown">Unknown</h3>
+<p>Similar to type any but has few differeneces.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">let</span><span style="color:#E1E4E8"> k</span><span style="color:#F97583">:</span><span style="color:#79B8FF">unknown</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">k</span><span style="color:#F97583">=</span><span style="color:#79B8FF">12</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">k</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"sam"</span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Feature</th><th>any</th><th>unknown</th></tr></thead><tbody><tr><td><strong>Purpose</strong></td><td>Disables type checking entirely.</td><td>Represents any value, but requires type checking before usage.</td></tr><tr><td><strong>Type Safety</strong></td><td>Minimal type safety. Can lead to runtime errors if not used carefully.</td><td>Enforces type safety by requiring checks before using the value.</td></tr><tr><td><strong>Operations</strong></td><td>Allows any operation on the value without type checks.</td><td>Restricts operations until the type is determined.</td></tr><tr><td><strong>Use Cases</strong></td><td>Suitable for rapid prototyping or when interacting with untyped libraries.</td><td>Preferable when working with dynamic or external values to ensure type safety.</td></tr><tr><td><strong>Recommendation</strong></td><td>Use sparingly, if ever.</td><td>Prefer unknown for better type safety.</td></tr></tbody></table>
+<p><code>In Short:</code></p>
+<ul>
+<li>Represents any value, but requires type checking before usage.</li>
+<li>You cannot directly access properties or call methods on an ‘unknown’ value.</li>
+<li>Enforces type safety by preventing operations until the type is narrowed down.</li>
+<li>Preferred over ‘any’ when dealing with values of uncertain or unspecified types.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">let</span><span style="color:#E1E4E8"> value1</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> any</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> "hello"</span><span style="color:#E1E4E8">; </span></span>
+<span class="line"><span style="color:#E1E4E8">value1 </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 10</span><span style="color:#E1E4E8">; </span><span style="color:#6A737D">// No compile-time error, but may cause runtime errors</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">let</span><span style="color:#E1E4E8"> value2</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> unknown</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> "hello"</span><span style="color:#E1E4E8">; </span></span>
+<span class="line"><span style="color:#6A737D">// value2.toUpperCase(); // Compile-time error: Cannot access 'toUpperCase' of unknown </span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">if</span><span style="color:#E1E4E8"> (</span><span style="color:#F97583">typeof</span><span style="color:#E1E4E8"> value2 </span><span style="color:#F97583">===</span><span style="color:#9ECBFF"> "string"</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#E1E4E8">  value2.</span><span style="color:#B392F0">toUpperCase</span><span style="color:#E1E4E8">(); </span><span style="color:#6A737D">// Now compiles</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h2 id="union-types">Union Types</h2>
+<p>Union types are types which tells that either the variable can be of type A or type B. A variable can be of multiple type based on dirrerent use cases. For creating multiple types.</p>
+<p><code>syntax: let v1: &#x3C;type1> | &#x3C;type2> | ....</code></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">let</span><span style="color:#E1E4E8"> v1</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> string</span><span style="color:#F97583"> |</span><span style="color:#79B8FF"> number</span></span>
+<span class="line"><span style="color:#E1E4E8">v1 </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 10</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">v1 </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "ten"</span></span></code></pre>
+<p>In the above example, we can store both string or number.</p>
+<h2 id="intersection-types">Intersection Types</h2>
+<p>Intersection are just opposite of union. These types are types with combination:</p>
+<p><code>syntax: let v1: &#x3C;type1> &#x26; &#x3C;type2> &#x26; ....</code></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">let</span><span style="color:#E1E4E8"> v1</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> string</span><span style="color:#F97583"> &#x26;</span><span style="color:#79B8FF"> number</span></span></code></pre>
+<p>In the above example, v1 becomes a type of varible that is common to both <code>string</code> and <code>number</code>! But something like that doesn’t exist.
+In this case it is by deafult treated as <code>never</code></p>
+<p><code>So How do we Implement Intersection?</code></p>
+<p>For that we must know that in typescript, we can create our own <code>custom type</code>.</p>
+<h2 id="custom-types">Custom Types</h2>
+<p>There are different ways to create custom types such as:</p>
+<ul>
+<li>Types</li>
+<li>Literal types</li>
+<li>Interface</li>
+</ul>
+<h3 id="type-alias">Type Alias:</h3>
+<p>Example:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">type</span><span style="color:#B392F0"> Teacher</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#FFAB70">    name</span><span style="color:#F97583">:</span><span style="color:#79B8FF">string</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#FFAB70">    isTeacher</span><span style="color:#F97583">:</span><span style="color:#79B8FF">boolean</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#F97583">type</span><span style="color:#B392F0"> Student</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#FFAB70">    name</span><span style="color:#F97583">:</span><span style="color:#79B8FF">string</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#FFAB70">    age</span><span style="color:#F97583">:</span><span style="color:#79B8FF">number</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">let</span><span style="color:#E1E4E8"> t1</span><span style="color:#F97583">:</span><span style="color:#B392F0"> Teacher</span><span style="color:#F97583"> &#x26;</span><span style="color:#B392F0"> Student</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">    isTeacher:</span><span style="color:#79B8FF">true</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">    name:</span><span style="color:#9ECBFF">"teacher1"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">    age:</span><span style="color:#79B8FF">40</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>In above example, <code>t1</code> will be an object that must have all three properties i.e <code>name</code>, <code>age</code> and <code>isTeacher</code> property.</p>
+<p>We can also define type aliases for basic types as well. for example:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">type</span><span style="color:#B392F0"> STATUS_CODE</span><span style="color:#F97583"> =</span><span style="color:#79B8FF"> number</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">let</span><span style="color:#E1E4E8"> serverResponse</span><span style="color:#F97583">:</span><span style="color:#B392F0">STATUS_CODE</span><span style="color:#F97583"> =</span><span style="color:#79B8FF"> 200</span><span style="color:#E1E4E8">;</span></span></code></pre>
+<h3 id="literal-types">Literal types</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">type</span><span style="color:#B392F0"> color</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> "red"</span><span style="color:#F97583"> |</span><span style="color:#9ECBFF"> "green"</span><span style="color:#F97583"> |</span><span style="color:#9ECBFF"> "blue"</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> myColor</span><span style="color:#F97583">:</span><span style="color:#B392F0">color</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> "blue"</span><span style="color:#E1E4E8">;</span></span></code></pre>
+<p>The color can be assigned between these three values only</p>
+<p>Before moving to Interface, we need to learn about defining types for functions. So In the next post, we’ll discuss about functions and its type defination.</p> </div> </article> </section> <script type="module">const t=document.getElementById("shareBtn"),e=document.getElementById("titleBox");t?.addEventListener("click",()=>{navigator.share&&navigator.share({title:e?.innerText,text:e?.innerText,url:window.location.href})});const n=document.getElementById("shareTwLink");n?.setAttribute("href",`https://twitter.com/intent/tweet?text=${encodeURIComponent(window.location.href)}`);const o=document.getElementById("shareLnLink");o?.setAttribute("href",`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(window.location.href)}`);const r=document.getElementById("shareFbLink");r?.setAttribute("href",`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`);</script>  </div> </div> </body></html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-sckkx6r4> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v5.5.6"><title>Getting Started with TypeScript</title><link rel="stylesheet" href="/_astro/advance-datatypes-in-ts.Bzq7Dzx6.css">
+<link rel="stylesheet" href="/_astro/advance-datatypes-in-ts.BD02cVDR.css"></head> <body class="bg-[radial-gradient(#2f7df4_1px,transparent_1px)] [background-size:16px_16px]" data-astro-cid-sckkx6r4> <div class="flex items-center justify-center" data-astro-cid-sckkx6r4> <div class="min-h-[90vh] w-full md:w-4xl md:mx-auto" data-astro-cid-sckkx6r4> <header class="p-4 w-full"> <div class="container flex justify-between h-16 mx-auto w-full"> <div class="flex items-center justify-between w-full"> <a rel="noopener noreferrer" href="#" aria-label="Back to homepage" class="text-3xl font-bold">
+IamVkr
+</a> <ul class="items-stretch hidden space-x-3 lg:flex"> <li class="flex"> <a rel="noopener noreferrer" href="/" class="flex items-center px-4">Home</a> </li> <li class="flex"> <a rel="noopener noreferrer" href="/projects" class="flex items-center px-4">Projects</a> </li> <li class="flex"> <a rel="noopener noreferrer" href="/blog" class="flex items-center px-4">Blog</a> </li> <li class="flex"> <a rel="noopener noreferrer" href="/about" class="flex items-center px-4">About</a> </li> </ul> </div> <button class="p-4 lg:hidden"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 dark:text-gray-800"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path> </svg> </button> </div> </header>  <section class="px-2"> <article class="py-10 bg-gray-100 text-gray-900 w-full min-h-[90vh]"> <div class="w-full mx-auto space-y-4 text-center"> <h1 class="text-xl font-bold leading-tight md:text-3xl" id="titleBox"> Getting Started with TypeScript </h1> <p class="text-sm text-gray-600">by
+<span itemprop="name" class="font-semibold">iamvkr on </span> <time datetime="2025-04-15">2025-04-15</time> </p> </div> <div class="border-b border-gray-300 text-gray-800"> <div class="flex justify-center pt-4 space-x-4 align-center"> <a id="shareTwLink" rel="noopener noreferrer" href="#" aria-label="Twitter" class="p-2 rounded-md "> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/twitter/twitter-original.svg" class="w-4 h-4"> </a> <a id="shareLnLink" rel="noopener noreferrer" href="#" aria-label="LinkedIn" class="p-2 rounded-md "> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-plain.svg" class="w-4 h-4"> </a> <a id="shareFbLink" rel="noopener noreferrer" href="#" aria-label="Facebook" class="p-2 rounded-md text-gray__"> <svg viewBox="0 0 128 128" class="w-4 h-4"> <rect fill="#000" x="4.83" y="4.83" width="118.35" height="118.35" rx="6.53" ry="6.53"></rect><path fill="#fff" d="M86.48 123.17V77.34h15.38l2.3-17.86H86.48v-11.4c0-5.17 1.44-8.7 8.85-8.7h9.46v-16A126.56 126.56 0 0091 22.7c-13.62 0-23 8.3-23 23.61v13.17H52.62v17.86H68v45.83z"></path> </svg> </a> <button id="shareBtn" aria-label="Email" class="p-2 rounded-md text-gray-800 cursor-pointer"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4"> <path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z"></path> </svg> </button> </div> </div> <div class="text-gray-800 px-4 md:px-10 my-10 markdown-body pt-4"> <p><em>So, you’re a JavaScript developer, right? You love its flexibility, its dynamic nature, the sheer joy of</em>, <em><strong>just making things happen.</strong></em>. <em>But let’s be honest, sometimes that flexibility can feel a bit too flexible.</em></p>
+<p><em><strong>Imagine this:</strong></em> you’re building a complex application, and suddenly, boom, a runtime error. Turns out you accidentally passed the wrong type of data somewhere, and now your app is throwing a tantrum. Sound familiar?</p>
+<p>Well, that’s where our superhero, <em><strong>TypeScript</strong></em>, comes to the rescue!</p>
+<h3 id="the-problem">The Problem:</h3>
+<p>JavaScript, being dynamically typed, doesn’t really care what kind of data you’re dealing with until you actually try to use it. This can lead to:</p>
+<ul>
+<li>
+<p><code>Unexpected behavior</code>: Imagine passing a string where a number should be. Your code might crash, or worse, produce incorrect results, and you’ll be scratching your head for hours trying to figure out why.</p>
+</li>
+<li>
+<p><code>Debugging nightmares</code>: Hunting down these sneaky type-related bugs can feel like a never-ending game of “Where’s Waldo?”</p>
+</li>
+<li>
+<p><code>Maintainability issues</code>: As your project grows, keeping track of data types across different parts of your code becomes a real headache.</p>
+</li>
+</ul>
+<h2 id="typescript-to-the-rescue">TypeScript to the Rescue!</h2>
+<p>TypeScript is essentially JavaScript on steroids. It’s a superset of JavaScript that adds static typing. This means you tell TypeScript what type of data each variable, function, and property should be.</p>
+<p><code>TypeScript is JavaScript with syntax for types.</code></p>
+<p>Benefits of TypeScript:</p>
+<ul>
+<li>
+<p>Early bug detection: Catch those pesky type errors early on, during development, instead of at runtime.</p>
+</li>
+<li>
+<p>Improved code readability: Type annotations make your code more self-documenting. You and your team will understand the code’s intent much more easily.</p>
+</li>
+<li>
+<p>Better code maintainability: Refactoring and making changes become less risky, as TypeScript helps you understand the impact of your changes.</p>
+</li>
+<li>
+<p>Enhanced tooling support: Many popular code editors and IDEs provide excellent TypeScript support, with features like autocompletion, code navigation, and refactoring tools.</p>
+</li>
+</ul>
+<h3 id="what-typescript-does">What typescript does:</h3>
+<ul>
+<li>static checking</li>
+<li>analyze the code.</li>
+</ul>
+<h3 id="working">Working:</h3>
+<p>The code written in typeScript is transpiled in js and js is what that at the end actually gets executed.
+<code>Typescript</code> is a <code>development tool</code>. The project still runs
+in js.</p>
+<h3 id="how-typescript-protects-your-code">How Typescript Protects your code:</h3>
+<p>Assume You and Your friend are working in a project, and you declared a fuction to get sum of 2 numbers as the code in js:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="js"><code><span class="line"><span style="color:#F97583">function</span><span style="color:#B392F0"> sum</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">a</span><span style="color:#E1E4E8">,</span><span style="color:#FFAB70">b</span><span style="color:#E1E4E8">){</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> a</span><span style="color:#F97583">+</span><span style="color:#E1E4E8">b;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>Now Your friend uses the function:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="js"><code><span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> result</span><span style="color:#F97583"> =</span><span style="color:#B392F0"> sum</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"Hello"</span><span style="color:#E1E4E8">,</span><span style="color:#9ECBFF">"World"</span><span style="color:#E1E4E8">);</span></span></code></pre>
+<p>In the above situation, we know, it’s not a valid way to use that function, but Hey <em>js doesn’t complain</em> about it. Instead it gives an output as a concatenated string.</p>
+<p>To Stop this <em>quirky</em> behavior, typescript was introduced. Using ts, it won’t let you write this kind of <em>epic codes</em>! This would instanly result in error.</p>
+<h2 id="documentaion">Documentaion:</h2>
+<p><em>typescriptlang.org</em></p>
+<h2 id="installation">Installation</h2>
+<p>Installation process required you to have Node js or Other Javascript Runtime to be installed. To instal typescript globally, use:</p>
+<p>npm:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">npm</span><span style="color:#9ECBFF"> i</span><span style="color:#9ECBFF"> typescript</span><span style="color:#79B8FF"> -g</span></span></code></pre>
+<p>yarn:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">yarn</span><span style="color:#9ECBFF"> global</span><span style="color:#9ECBFF"> add</span><span style="color:#9ECBFF"> typescript</span></span></code></pre>
+<h2 id="syntax">Syntax:</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">let</span><span style="color:#E1E4E8"> variabeName</span><span style="color:#F97583">:</span><span style="color:#B392F0"> type</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> value;</span></span></code></pre>
+<p><em>type should be always lowecase.</em></p>
+<h2 id="creating-your-first-typescript-file">Creating your first TypeScript file</h2>
+<p>Create a new file named hello.ts with the following content:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"Hello Ts"</span><span style="color:#E1E4E8">); </span></span></code></pre>
+<h3 id="compiling-ts-to-js">Compiling ts to js:</h3>
+<p>Open your terminal, navigate to the directory where you saved hello.ts, and run the following command:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">tsc</span><span style="color:#9ECBFF"> hello.ts</span><span style="color:#E1E4E8"> </span></span></code></pre>
+<p>This will generate a new file named <code>hello.js</code> containing the compiled JavaScript code.</p>
+<p>You can now execute the generated JavaScript file using Node.js:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">node</span><span style="color:#9ECBFF"> hello.js</span></span></code></pre>
+<p>This will output: <code>Hello, World!</code></p>
+<h2 id="types-in-ts">Types in ts</h2>
+<h3 id="basic-types">Basic Types</h3>
+<p>You must already have heard about these basic types available in js, that still works fine here in typescript.</p>
+<p><code>Number</code>, <code>String</code>, <code>Boolean</code>, <code>Null</code>, <code>Undefined</code>, <code>Object</code>, <code>Array</code></p>
+<p>We just need to define the type of the variable. For Example:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">let</span><span style="color:#E1E4E8"> message</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> string</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> "Hello Ts"</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">let</span><span style="color:#E1E4E8"> userId</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> number</span><span style="color:#F97583"> =</span><span style="color:#79B8FF"> 1254</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">let</span><span style="color:#E1E4E8"> isLoggedIn</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> boolean</span><span style="color:#F97583"> =</span><span style="color:#79B8FF"> false</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">let</span><span style="color:#E1E4E8"> myNullVariable</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> null</span><span style="color:#F97583"> =</span><span style="color:#79B8FF"> null</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">let</span><span style="color:#E1E4E8"> myUndefinedVariable</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> undefined</span><span style="color:#F97583"> =</span><span style="color:#79B8FF"> undefined</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">let</span><span style="color:#E1E4E8"> myObjectVariable</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> object</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> {}; </span></span>
+<span class="line"><span style="color:#F97583">let</span><span style="color:#E1E4E8"> myArrayVariable</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> string</span><span style="color:#E1E4E8">[] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> [</span><span style="color:#9ECBFF">"apple"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"banana"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"orange"</span><span style="color:#E1E4E8">];</span></span></code></pre>
+<h3 id="type-inference">Type inference</h3>
+<p>Type inference means TypeScript is smart enough to figure out the type of a variable based on how you’re using it. for example:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">let</span><span style="color:#E1E4E8"> myName </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "Alice"</span><span style="color:#E1E4E8">;</span></span></code></pre>
+<p>Even though we didn’t explicitly declare <code>myName</code> as a <code>string</code>, TypeScript infers that it’s a string because we assigned a string value to it.</p>
+<h2 id="fun-with-arrays-in-ts">Fun with Arrays in Ts</h2>
+<p>Arrays are similar to array defined in js, with just type defined before [] for example:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> numbers</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> number</span><span style="color:#E1E4E8">[] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> [</span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">2</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">3</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">4</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">5</span><span style="color:#E1E4E8">];</span></span>
+<span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> words</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> string</span><span style="color:#E1E4E8">[] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> [</span><span style="color:#9ECBFF">"apple"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"banana"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"cherry"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"date"</span><span style="color:#E1E4E8">];</span></span></code></pre>
+<p>Typescript has also got another way to define arrays with angle brackets like:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">let</span><span style="color:#E1E4E8"> strArr</span><span style="color:#F97583">:</span><span style="color:#B392F0"> Array</span><span style="color:#E1E4E8">&#x3C;</span><span style="color:#79B8FF">string</span><span style="color:#E1E4E8">> </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> [];</span></span>
+<span class="line"><span style="color:#E1E4E8">strArr.</span><span style="color:#B392F0">push</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"abc"</span><span style="color:#E1E4E8">);</span></span></code></pre>
+<p>You can use whatever suits you the best, knowing the syntax is essential so that you don’t get freak out when you find them in some codebases.</p>
+<p><strong>An interesting observation:</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> fruits</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> [];</span></span></code></pre>
+<p>So what’s the type of item we can store in fruits?</p>
+<p>let’s push something:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#E1E4E8">fruits.</span><span style="color:#B392F0">push</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"apple"</span><span style="color:#E1E4E8">);</span></span></code></pre>
+<p>We get error: <code>Argument of type 'number' is not assignable to parameter of type 'never'.</code></p>
+<p>So default type of such array is <code>never</code>, of course we can change above statement to work as:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> fruits</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> string</span><span style="color:#E1E4E8">[] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> [];</span></span>
+<span class="line"><span style="color:#E1E4E8">fruits.</span><span style="color:#B392F0">push</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"apple"</span><span style="color:#E1E4E8">);</span></span></code></pre>
+<p><strong>Storing Multiple types in Array</strong></p>
+<p>You might be wondring, how could I store both Number and string in an array, In js, we could do with ease. But How in typescript?</p>
+<p>Could it be like: <code>const arr: [string , number]=["name",10];</code></p>
+<p>Yes, but there’s problem, you could store only two items now, also the position can’t be changed, the <code>first</code> item must be <code>string</code> and <code>second</code> must be <code>number</code>.</p>
+<p><code>How do we fix that</code></p>
+<p>You can store both numbers and strings in an array in TypeScript using a union type:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> mixedArray</span><span style="color:#F97583">:</span><span style="color:#E1E4E8"> (</span><span style="color:#79B8FF">string</span><span style="color:#F97583"> |</span><span style="color:#79B8FF"> number</span><span style="color:#E1E4E8">)[] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> [</span><span style="color:#9ECBFF">"hello"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">42</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"world"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">3.14</span><span style="color:#E1E4E8">]; </span></span></code></pre>
+<p>That bring us to the next level we need to learn, i.e types beyond basics.</p>
+<h3 id="beyound-the-basics">Beyound the basics</h3>
+<p>TypeScript offers a rich type system that goes beyond simple primitives. Some of the more advanced types are which we will discuss later:</p>
+<ul>
+<li>tuples</li>
+<li>enum</li>
+<li>any</li>
+<li>never</li>
+<li>unknown</li>
+<li>Union Types,Intersection Types,Generic Types</li>
+</ul>
+<p>Hope you enjoyed reading this, Get to know the basics of typescript, so in the next post we will take it from here.
+You can bookmark the post and share if you liked reading the post!</p> </div> </article> </section> <script type="module">const t=document.getElementById("shareBtn"),e=document.getElementById("titleBox");t?.addEventListener("click",()=>{navigator.share&&navigator.share({title:e?.innerText,text:e?.innerText,url:window.location.href})});const n=document.getElementById("shareTwLink");n?.setAttribute("href",`https://twitter.com/intent/tweet?text=${encodeURIComponent(window.location.href)}`);const o=document.getElementById("shareLnLink");o?.setAttribute("href",`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(window.location.href)}`);const r=document.getElementById("shareFbLink");r?.setAttribute("href",`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`);</script>  </div> </div> </body></html>
